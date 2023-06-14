@@ -1,0 +1,173 @@
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                
+              </div>
+
+                <p class="text-center fs-3" [ngClass]= "isAccountCreated ? 'text-success pb-1': 'text-danger pb-1'">
+                    {{displayMsg}}
+                </p>
+
+                <form [formGroup] = "registerForm" (ngSubmit) = "registerSubmited()" class="border p-2 border-light">
+                    <div class="row">
+                        <div class="col text-center p-2 mb-3 bg-light">
+                            <span class="fs-3"><h2>Register</h2></span>
+                        </div>
+                    </div> 
+
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="Id" class="form-label"></label>
+                            <input type="text" class="form-control" id="Id" placeholder="Id"
+                            formControlName="Id">
+                        <div class="form-text text-danger" *ngIf="Id.errors?.['required'] && Id.touched">
+                        
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="FirstName" class="form-label"></label>
+                            <input type="text" class="form-control" id="FirstName" placeholder="Firstname"
+                            formControlName="FullName">
+                        <div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && FirstName.touched">
+                            Name is Required.
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Email" class="form-label"></label>
+                            <input type="Email" class="form-control" id="Email" placeholder="Email" formControlName="Email">
+                        <div class="form-text"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Pwd" class="form-label"></label>
+                            <input type="Pwd" class="form-control" id="Pwd" placeholder="Password" formControlName="Pwd">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Designation" class="form-label"></label>
+                            <input type="text" class="form-control" id="Designation" placeholder="Designation" formControlName="Designation">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Role" class="form-label"></label>
+                            <input type="text" class="form-control" id="Role" placeholder="Role" formControlName="Role">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="OfficeLocation" class="form-label"></label>
+                            <input type="text" class="form-control" id="OfficeLocation" placeholder="OfficeLocation" formControlName="OfficeLocation">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="DateOfHire" class="form-label"></label>
+                            <input type="DateOfHire" class="form-control" id="DateOfHire" placeholder="DateOfHire" formControlName="DateOfHire">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="DateOfBirth" class="form-label"></label>
+                            <input type="DateOfBirth" class="form-control" id="DateOfBirth" placeholder="DateOfBirth" formControlName="DateOfBirth">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Gender" class="form-label"></label>
+                            <input type="text" class="form-control" id="Gender" placeholder="Gender" formControlName="Gender">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="PhNumber" class="form-label"></label>
+                            <input type="text" class="form-control" id="PhNumber" placeholder="PhNumber" formControlName="PhNumber">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Address" class="form-label"></label>
+                            <input type="Address" class="form-control" id="Address" placeholder="Address" formControlName="Address">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="State" class="form-label"></label>
+                            <input type="trxt" class="form-control" id="State" placeholder="State" formControlName="State">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Pincode" class="form-label"></label>
+                            <input type="text" class="form-control" id="Pincode" placeholder="Pincode" formControlName="Pincode">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="IsActive" class="form-label"></label>
+                            <input type="text" class="form-control" id="IsActive" placeholder="IsActive" formControlName="IsActive">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="RPWD" class="form-label"></label>
+                            <input type="Rpwd" class="form-control" id="Rpwd" placeholder="Re-Enter Password" formControlName="Rpwd">
+                            <div class="form-text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class ="col-6 offset-3 text-center">
+                        <div class="d-grid ">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mt-3">
+                        <span class="me-2">Already have Account?</span><a routerLink="/login">Login</a>
+                        </div>
+                    </div>
+                    
+                        
+                    </div>
+                </form>
+
